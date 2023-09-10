@@ -10,6 +10,11 @@ headers = {
 }
 
 
+def get_file_name():
+    file_name = input("Type the name of the .txt file you want to save your quotes: ")
+    return file_name
+
+
 def format_text(quote):
     content = quote["content"]
     author = quote["originator"]["name"]
@@ -22,11 +27,13 @@ def format_text(quote):
 
 
 def save_quote(quote):
-    if not os.path.exists("quotes.txt"):
-        with open("quotes.txt", "w") as file:
+    file_name = get_file_name()
+    print(quote)
+    if not os.path.exists(file_name):
+        with open(file_name, "w") as file:
             file.write(quote)
     else:
-        with open("quotes.txt", "a") as file:
+        with open(file_name, "a") as file:
             file.write(quote)
             file.close()
 
@@ -36,7 +43,6 @@ def get_quote():
     if response.status_code == 200:
         quote_data = response.json()
         formatted_quote = format_text(quote_data)
-        print(formatted_quote)
         save_quote(formatted_quote)
     else:
         print(None)
