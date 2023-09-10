@@ -1,5 +1,6 @@
 import requests
 import json
+import os
 
 url = "https://quotes15.p.rapidapi.com/quotes/random/"
 
@@ -21,9 +22,13 @@ def format_text(quote):
 
 
 def save_quote(quote):
-    with open("quotes.txt", "a") as file:
-        file.write(quote)
-        file.close()
+    if not os.path.exists("quotes.txt"):
+        with open("quotes.txt", "w") as file:
+            file.write(quote)
+    else:
+        with open("quotes.txt", "a") as file:
+            file.write(quote)
+            file.close()
 
 
 def get_quote():
