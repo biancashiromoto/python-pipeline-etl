@@ -3,7 +3,7 @@
 ## 🇺🇸 About this project
 This project is a simple Python program that fetches random quotes from an API and saves them in a text file. It utilizes the <a href="https://rapidapi.com/martin.svoboda/api/quotes15/" target="_blank">RapidAPI</a> platform to access the quotes API.
 
-The program makes an HTTP request to the API, retrieves a random quote, formats it, and then appends it to a text file along with the author's name.
+The program makes an HTTP request to the API, retrieves a random quote, formats it, and then appends it to a text file chosen by the user along with the author's name.
 
 ## 📝 Usage
 1. Make sure you have Python installed.
@@ -19,7 +19,7 @@ The program makes an HTTP request to the API, retrieves a random quote, formats 
 ## :brazil: Sobre esse projeto
 Este projeto é um programa simples em Python que faz a busca de frases aleatórias de uma API e as salva em um arquivo de texto. Ele utiliza a plataforma RapidAPI para acessar a API de frases.
 
-O programa faz uma requisição HTTP à API, obtém uma frase aleatória, a formata e então a adiciona a um arquivo de texto juntamente com o nome do autor.
+O programa faz uma requisição HTTP à API, obtém uma frase aleatória, a formata e então a adiciona a um arquivo de texto escolhido pelo usuário juntamente com o nome do autor.
 
 ## 📝 Uso
 1. Certifique-se de ter o Python instalado.
