@@ -9,6 +9,13 @@ headers = {
     "X-RapidAPI-Host": "quotes15.p.rapidapi.com",
 }
 
+def is_txt_file(file_name):
+    return file_name.endswith(".txt")
+
+
+def is_valid_file_name(file_name):
+    return re.match(r"^[a-zA-Z0-9_.-]+$", file_name) is not None
+
 
 def get_file_name():
     file_name = input("Type the name of the .txt file you want to save your quotes: ")
